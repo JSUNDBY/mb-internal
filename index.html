@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Producer Brief — Melissa's Botanicals (Internal)</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --brand-red: #b2292e;
+      --brand-red-soft: #fbeaec;
+      --brand-dark: #1a1a1a;
+      --brand-cream: #faf8f5;
+      --brand-warm: #f5f0eb;
+      --text: #2c2c2c;
+      --text-light: #6b6b6b;
+      --border: #e5e0db;
+      --bg: #faf8f5;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-weight: 400;
+    }
+
+    /* HEADER */
+    .doc-header {
+      background: var(--brand-dark);
+      color: white;
+      padding: 48px 40px 32px;
+      text-align: center;
+      position: relative;
+    }
+    .doc-header::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 2px;
+      background: var(--brand-red);
+    }
+    .doc-header .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      opacity: 0.55;
+      margin-bottom: 12px;
+    }
+    .doc-header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+    .doc-header h1 strong { font-weight: 600; color: #f0d5d6; }
+    .doc-header .stamp {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 6px 14px;
+      background: var(--brand-red);
+      color: white;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+      border-radius: 100px;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 28px 64px;
+    }
+
+    /* Markdown body styles */
+    .md h1, .md h2, .md h3, .md h4 {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--brand-dark);
+      font-weight: 500;
+      margin-top: 36px;
+      margin-bottom: 14px;
+      line-height: 1.3;
+    }
+    .md > h1:first-child { margin-top: 0; }
+    .md h1 { font-size: 30px; font-weight: 600; }
+    .md h2 {
+      font-size: 24px;
+      font-weight: 600;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .md h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--brand-red);
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.3px;
+      margin-top: 28px;
+    }
+    .md h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--brand-dark);
+      font-family: 'Inter', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-top: 24px;
+    }
+
+    .md p { margin-bottom: 14px; font-size: 15px; line-height: 1.75; }
+    .md p > em { font-family: 'Cormorant Garamond', serif; font-size: 17px; color: var(--brand-dark); }
+
+    .md strong { color: var(--brand-dark); font-weight: 600; }
+    .md em { font-style: italic; }
+
+    .md ul, .md ol {
+      margin-bottom: 16px;
+      padding-left: 22px;
+    }
+    .md ul li, .md ol li {
+      margin-bottom: 6px;
+      font-size: 14.5px;
+      line-height: 1.7;
+    }
+    .md ul li::marker { color: var(--brand-red); }
+
+    .md hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 32px 0;
+    }
+
+    .md blockquote {
+      background: var(--brand-red-soft);
+      border-left: 3px solid var(--brand-red);
+      padding: 14px 18px;
+      margin: 14px 0 18px;
+      border-radius: 0 4px 4px 0;
+    }
+    .md blockquote p {
+      margin: 0;
+      font-size: 14.5px;
+      color: var(--brand-dark);
+      font-style: italic;
+    }
+    .md blockquote p > em {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      font-style: italic;
+      color: var(--brand-dark);
+    }
+
+    .md table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 18px;
+      font-size: 13.5px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .md table th {
+      background: var(--brand-warm);
+      padding: 10px 14px;
+      text-align: left;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--brand-dark);
+      font-weight: 600;
+      border-bottom: 1px solid var(--border);
+    }
+    .md table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .md table tr:last-child td { border-bottom: none; }
+    .md table td:first-child {
+      font-weight: 600;
+      color: var(--brand-dark);
+      width: 38%;
+    }
+
+    .md code {
+      background: var(--brand-warm);
+      color: var(--brand-dark);
+      padding: 1px 6px;
+      border-radius: 3px;
+      font-size: 13px;
+      font-family: 'SF Mono', Menlo, monospace;
+    }
+
+    .md a {
+      color: var(--brand-red);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* Internal-only banner */
+    .internal-banner {
+      background: var(--brand-red);
+      color: white;
+      padding: 10px 18px;
+      text-align: center;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+      text-transform: uppercase;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    /* Footer */
+    .footer {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 32px 28px 48px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--text-light);
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .doc-header { padding: 36px 20px 24px; }
+      .doc-header h1 { font-size: 28px; }
+      .container { padding: 32px 18px 48px; }
+      .md table td:first-child { width: auto; }
+      .md h1 { font-size: 24px; }
+      .md h2 { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="internal-banner">Internal · Producer Brief · Not for Melissa</div>
+
+  <div class="doc-header">
+    <div class="label">Producer Brief</div>
+    <h1><strong>Melissa's Botanicals</strong></h1>
+    <div class="stamp">Dawn's eyes only</div>
+  </div>
+
+  <div class="container">
+    <div class="md">
+      <h2>The shape of the conversation</h2>
+<p>You're walking Melissa through two documents: the <strong>site report</strong> (what we found) and the <strong>pre-proposal</strong> (what we'd do). The goal of the call isn't to close — it's to land on the right scope. The price gets quoted <em>after</em> the call, in writing.</p>
+<p><strong>Order of conversation:</strong></p>
+<ol>
+<li>Site report first — short. The findings prove we actually looked.</li>
+<li>The foundation — clarify it's required, non-negotiable.</li>
+<li>Growth services menu — this is where the conversation lives. Most of the time should be here.</li>
+<li>Platform additions — only if she leans in. Don't push.</li>
+<li>Scope conversation closes with: "Let me get this to Josh, you'll have a number within 48 hours."</li>
+</ol>
+<hr />
+<h2>The one-line read</h2>
+<blockquote>
+<p><em>Your store engine is fine. Everything bolted on top of it is the problem. We strip the bolt-ons, add a real catalog, host it on Cloudflare so it loads in under a second — and you keep the same WooCommerce admin you log into today.</em></p>
+</blockquote>
+<p>If you only remember one sentence, that's it.</p>
+<hr />
+<h2>The architecture, in one paragraph</h2>
+<p>The new site lives on <strong>Cloudflare</strong> (the fastest delivery network on the internet — same one used by huge brands). The admin she logs into is <strong>still WooCommerce</strong> — same place, same buttons, same workflow. We're rebuilding the half customers see, and leaving the half she uses alone. That's why this isn't scary: she doesn't have to relearn anything. Add a product in WooCommerce the way she always has → it shows up on the new fast site automatically.</p>
+<p>If she asks "do I have to leave WordPress?" — <strong>no.</strong> That's an <em>optional</em> later upgrade called Modern Admin Migration (Medusa). Only if and when she wants a cleaner admin too. Not required, not pushed.</p>
+<hr />
+<h2>How to talk about pricing (no numbers, on purpose)</h2>
+<p><strong>Don't quote any number on this call.</strong> Not a ceiling, not a floor, not a range. The proposal intentionally doesn't anchor on a price because we want her to focus on <em>what she wants</em> before she sees a number. The minute a number is in the room, the conversation becomes about the number instead of the scope.</p>
+<p><strong>The frame to use:</strong> "The price depends on what you choose to include. Once we settle the scope, Josh quotes a single fixed number — no hourly billing, half on signature, half at launch. You'll have it in writing within 48 hours of this call."</p>
+<p><strong>If she presses for a ballpark:</strong>
+- <em>"Honestly, I don't want to throw a number at you before we know what's in. Josh's number for a focused engagement is very different from a comprehensive one. Let's walk through what you want first — then I'll have him send you the real number tomorrow."</em>
+- Repeat as needed. Don't budge. The scope conversation is the value.</p>
+<p><strong>If she really pushes:</strong>
+- <em>"I can ask Josh to send you a written range right now if that helps — but my advice is to pick the scope first. Otherwise you'll anchor on the number instead of what you actually want the site to do."</em>
+- If she insists, you can offer: <em>"I'll get a directional range to you in writing within an hour."</em> — then text Josh to write one quickly.</p>
+<p><strong>Why we work this way:</strong> Melissa is bright. She'll figure out very quickly that a fuller scope costs more. Letting her get there on her own — by picking what she wants — beats us announcing a number that triggers sticker shock before she's seen the value.</p>
+<p><strong>Never promise:</strong> specific traffic numbers, specific revenue lift, specific search rankings, or a timeline shorter than 6 weeks.</p>
+<hr />
+<h2>Plain-English translation cheat sheet</h2>
+<p>If she asks what something means, here's how to say it back to her:</p>
+<table>
+<thead>
+<tr>
+<th>If she asks about...</th>
+<th>Say...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cloudflare</strong></td>
+<td>"The fastest delivery network on the internet. It's where the new customer-facing site will live. Customers everywhere in the world see a near-instant page load. It's free at the scale her business runs at."</td>
+</tr>
+<tr>
+<td><strong>Headless / Headless WooCommerce</strong></td>
+<td>"Two halves of the same store. WooCommerce keeps doing what it's good at — letting you add products, manage orders, handle customers. Cloudflare takes over the half customers see, because it's much faster than WordPress at that job."</td>
+</tr>
+<tr>
+<td><strong>Medusa (Modern Admin Migration)</strong></td>
+<td>"The optional next-level upgrade — only if she wants to leave WordPress entirely later. Cleaner admin, no plugin maintenance. Not required for the rebuild. Just an option for the future."</td>
+</tr>
+<tr>
+<td><strong>WooCommerce / WordPress</strong></td>
+<td>"The store engine she's already on. The admin she logs into stays exactly the same. We're keeping it."</td>
+</tr>
+<tr>
+<td><strong>Elementor</strong></td>
+<td>"The drag-and-drop page builder. It's been used the wrong way — every product is hand-built instead of using a template. After the rebuild, we don't need it."</td>
+</tr>
+<tr>
+<td><strong>The product template</strong></td>
+<td>"One clean page that all 115 of your products share. Today every product is its own hand-built page, which is why nothing is consistent."</td>
+</tr>
+<tr>
+<td><strong>Schema / structured data</strong></td>
+<td>"Invisible tags on each product that tell Google 'this is a product, here's its price.' Without them, your products show up as plain links instead of with stars and prices."</td>
+</tr>
+<tr>
+<td><strong>The duplicate jQuery thing</strong></td>
+<td>"The site loads a core piece of software twice on every page. Like pouring two cups of coffee when you only need one."</td>
+</tr>
+<tr>
+<td><strong>Alt text</strong></td>
+<td>"The text description attached to each photo. Yours are mostly blank, which means Google can't see what's in your product photos."</td>
+</tr>
+<tr>
+<td><strong>WebP / AVIF / image formats</strong></td>
+<td>"Modern image formats that are smaller and faster. Your photos are still in older formats, which is part of why the site feels slow on phones."</td>
+</tr>
+<tr>
+<td><strong>Page builder vs. template</strong></td>
+<td>"Right now every page is a one-off. A template means change-once-and-it-applies-everywhere."</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Scope-by-scope selling points</h2>
+<p>These are the lines that connect each piece of the build to a <em>business outcome.</em> Use the one that resonates with whatever she's saying.</p>
+<h3>Foundation (required)</h3>
+<ul>
+<li><strong>Catalog architecture</strong> — <em>"This is the piece that turns scrollers into buyers. Right now someone looking for a sleep formula has to scroll past 115 products to find it. After this, they click 'Wellness &gt; Sleep' and they're there."</em></li>
+<li><strong>Product template</strong> — <em>"Every product page looks like the same caliber of brand. Right now they don't — there's drift across the catalog."</em></li>
+<li><strong>Image pipeline</strong> — <em>"Phone shoppers stop waiting for your photos to load."</em></li>
+<li><strong>SEO &amp; schema</strong> — <em>"You start showing up in Google with stars and prices like your competitors do. This is the biggest lever we have on free traffic."</em></li>
+<li><strong>Performance</strong> — <em>"The site feels professionally maintained. That perception flows into trust on the product page."</em></li>
+<li><strong>Admin handoff</strong> — <em>"You add products yourself, from your phone if you want, in five minutes. No more developer call."</em></li>
+</ul>
+<h3>Growth services (her choice)</h3>
+<ul>
+<li><strong>Brand Story Video</strong> — <em>"Twenty-seven years of clinical practice, the French training, the sourcing — none of that is on the site right now. This is the piece that puts the story on the homepage."</em></li>
+<li><strong>Product Education Videos</strong> — <em>"Products with a how-to-use video convert dramatically better than ones without. Top sellers first."</em></li>
+<li><strong>Editorial / Blog SEO</strong> — <em>"This is the compounding channel. One good article keeps bringing traffic for years. Most ecommerce growth at scale comes from this."</em></li>
+<li><strong>Email Automation</strong> — <em>"Abandoned cart alone typically recovers 10-15% of lost sales once it's running. That's revenue you're leaving on the table right now."</em></li>
+<li><strong>Reviews &amp; UGC</strong> — <em>"Stars in search results. Trust on the product page. Both move the needle."</em></li>
+<li><strong>AI Aromatherapy Assistant</strong> — <em>"Most customers don't buy because they don't know which oil is right for them. This answers that, 24/7, in your voice."</em></li>
+<li><strong>Press &amp; Media Kit</strong> — <em>"Makes it easy for journalists to write about you. Right now every press inquiry is a back-and-forth."</em></li>
+<li><strong>Condition-Based Landing Pages</strong> — <em>"People don't Google 'essential oil.' They Google 'how to stop hot flashes naturally.' These pages capture that traffic."</em></li>
+</ul>
+<h3>Platform additions (bigger asks)</h3>
+<ul>
+<li><strong>Modern Admin Migration (Medusa)</strong> — <em>"If WordPress eventually feels like too much to maintain, this is the path off it. We migrate to a cleaner admin called Medusa. Not required — only if and when she wants it. The customer-facing Cloudflare site stays the same; only the back-end she logs into changes."</em> Don't push. Mention as a future option.</li>
+<li><strong>Wholesale / B2B</strong> — Higher margins, more predictable revenue. Practitioners already using her formulas in clinics.</li>
+<li><strong>Subscriptions</strong> — Most stable revenue type. Signals reliability to investors.</li>
+<li><strong>Practitioner Program</strong> — Formalizes the credibility she already has in the aromatherapy community.</li>
+<li><strong>Affiliate / Referral</strong> — Rewards the word-of-mouth that already drives her best customers.</li>
+<li><strong>Photography Refresh</strong> — The catalog feels premium when the imagery is unified.</li>
+</ul>
+<hr />
+<h2>Likely Melissa objections + how to handle</h2>
+<p><strong>"We already have a website."</strong>
+- <em>"You do, and it works. The problem isn't that it's broken — it's that it can't scale with the business. Right now every new product or change requires a developer. We're fixing the architecture so you own it."</em></p>
+<p><strong>"How fast will it pay back?"</strong>
+- <em>"Hard to promise specific numbers, but here's what we know: catalog filters dramatically reduce bounce rate. Schema markup measurably increases search clicks. Abandoned cart emails recover 10-15% of lost sales. These are well-documented effects. The compounding pieces — content, SEO — pay back over months, not weeks."</em></p>
+<p><strong>"Why are we paying for a producer?"</strong>
+- <em>"Because your time is better spent on the business than coordinating with a developer. I (Dawn) handle scheduling, feedback gathering, and decisions so Josh can stay heads-down on the build. You get one point of contact and faster execution."</em></p>
+<p><strong>"Can we start small and add later?"</strong>
+- <em>"Yes — that's exactly how this is designed. The foundation is non-negotiable, but the growth services are pick-and-add. Most clients start with the foundation plus two growth services and layer the rest in later. The system is built to expand."</em></p>
+<p><strong>"Why not just fix what's wrong?"</strong>
+- <em>"The technical issues we found aren't bugs — they're symptoms of an architecture problem. Patching them one by one costs more than the rebuild and leaves you exactly where you started: dependent on a developer for every change. We're fixing the root, not the leaves."</em></p>
+<p><strong>"I had bad experiences with developers before."</strong>
+- <em>"Understood. That's exactly why we work the way we do: fixed price, fixed scope, one deposit, one delivery date. No hourly billing. Half on signature, half at launch. If something's not right at launch, we don't move on."</em></p>
+<p><strong>"I have a developer already."</strong>
+- <em>"That's fine — they can stay involved. This isn't about replacing them, it's about giving you owner-managed control so you're not blocked on them for routine changes. They can handle the things that genuinely need a developer."</em></p>
+<p><strong>"Do I have to leave WordPress?"</strong>
+- <em>"No. You keep logging into the same WooCommerce admin you use today. Same place, same buttons. We're only rebuilding what your customers see — that part moves to Cloudflare to make it fast. The half you use stays exactly where it is."</em>
+- <em>"If later on you decide you'd rather have a cleaner admin too, there's an optional upgrade path called Modern Admin Migration. But it's not required, and we're not pushing it."</em></p>
+<p><strong>"Why Cloudflare specifically?"</strong>
+- <em>"It's the fastest delivery network on the internet — the same one big global brands use. For us, it means your customers see the site load almost instantly from anywhere in the world. And the plan we'd use is free at her scale, so it's not adding to her monthly costs."</em></p>
+<p><strong>"What if I want to add video?"</strong>
+- <em>"That's one of the growth services. We can produce a brand story video, product education videos for top sellers, or both. Video on the homepage and product pages is one of the bigger conversion lifts available. Want me to leave that in the scope?"</em></p>
+<hr />
+<h2>Reading Melissa during the call</h2>
+<p><strong>If she's pacing fast / jumping around topics:</strong>
+- Slow down. Reset to the document. "Let me show you what we mean — page 2 of the report."
+- Don't try to address every direction she goes. Pick one thread and finish it.</p>
+<p><strong>If she's silent / thoughtful:</strong>
+- Give space. Don't fill silence with pitch. She's processing.</p>
+<p><strong>If she lights up on a specific growth service:</strong>
+- Stay there. That's the conversation. Don't move on to the next thing. Ask what about it resonated.
+- <em>"That one seems like it's clicking — tell me what you're seeing."</em></p>
+<p><strong>If she goes negative:</strong>
+- Don't defend. Note it and move on. <em>"Got it, we can leave that one out. What about the next one?"</em></p>
+<hr />
+<h2>What you don't need to answer</h2>
+<p>If Melissa asks anything technical you don't know — and she will — the answer is:</p>
+<blockquote>
+<p><em>"Good question for Josh. Let me get the specific answer back to you tomorrow."</em></p>
+</blockquote>
+<p>You don't need to know every technical detail. You need to know enough to keep the conversation moving and bring back precise questions for Josh to answer in writing. That's a feature, not a bug — clients prefer precise written answers to off-the-cuff verbal ones.</p>
+<hr />
+<h2>The strategic frame (subtext, not script)</h2>
+<p>The business needs to look like it's ready to scale. Investors care about growth, retention, infrastructure that can support 10x the volume. Everything in this document supports that read — but we never say it out loud. We talk about:</p>
+<ul>
+<li>"Built to scale"</li>
+<li>"Compounding channels"</li>
+<li>"Recurring revenue" (subscriptions)</li>
+<li>"New revenue channels" (wholesale, practitioner program)</li>
+<li>"Stable, predictable" (email automation, subscriptions)</li>
+</ul>
+<p>What we don't talk about:
+- Whether the current site is hurting investor confidence
+- Specific revenue projections
+- Competitor comparisons by name</p>
+<hr />
+<h2>After the call</h2>
+<p>Within an hour of hanging up, message Josh:
+1. Which growth services Melissa said yes / maybe / no to
+2. Any platform additions she leaned into
+3. Anything she said she wanted that's not in this document
+4. The timing pressure (when does she want this live?)</p>
+<p>Josh writes the formal proposal from that. You see it before it goes to her. It goes out within 48 hours.</p>
+<hr />
+<p><em>Built for one walk-through. Reread before the call.</em></p>
+    </div>
+  </div>
+
+  <div class="footer">
+    Prepared by Josh Sundby · May 18, 2026 · Reread before the call
+  </div>
+</body>
+</html>
