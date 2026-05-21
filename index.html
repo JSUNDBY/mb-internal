@@ -30,7 +30,6 @@
       font-weight: 400;
     }
 
-    /* HEADER */
     .doc-header {
       background: var(--brand-dark);
       color: white;
@@ -81,7 +80,6 @@
       padding: 48px 28px 64px;
     }
 
-    /* Markdown body styles */
     .md h1, .md h2, .md h3, .md h4 {
       font-family: 'Cormorant Garamond', serif;
       color: var(--brand-dark);
@@ -207,7 +205,6 @@
       text-underline-offset: 2px;
     }
 
-    /* Internal-only banner */
     .internal-banner {
       background: var(--brand-red);
       color: white;
@@ -222,7 +219,6 @@
       z-index: 100;
     }
 
-    /* Footer */
     .footer {
       max-width: 760px;
       margin: 0 auto;
@@ -256,23 +252,25 @@
     <div class="md">
       <h2>The shape of the conversation</h2>
 <p>You're walking Melissa through two documents: the <strong>site report</strong> (what we found) and the <strong>pre-proposal</strong> (what we'd do). The goal of the call isn't to close — it's to land on the right scope. The price gets quoted <em>after</em> the call, in writing.</p>
+<p><strong>Make sure she knows up front: this is a new website.</strong> Not a tune-up, not a refresh — a complete new customer-facing site. The admin she logs into stays the same so her day-to-day product management doesn't change. Everything customers see is built from scratch. Be direct about this. If she only hears "rebuild" or "fix," she may picture a smaller scope than what we're actually doing.</p>
 <p><strong>Order of conversation:</strong></p>
 <ol>
-<li>Site report first — short. The findings prove we actually looked.</li>
-<li>The foundation — clarify it's required, non-negotiable.</li>
+<li>Set the frame: this is a new website. Brief and direct.</li>
+<li>Site report — short. The findings prove we actually looked at her current site.</li>
+<li>The new website (the core build) — clarify it's required, non-negotiable.</li>
 <li>Growth services menu — this is where the conversation lives. Most of the time should be here.</li>
 <li>Platform additions — only if she leans in. Don't push.</li>
-<li>Scope conversation closes with: "Let me get this to Josh, you'll have a number within 48 hours."</li>
+<li>Scope conversation closes with: "Let me get this to Josh, you'll have a written number within 48 hours."</li>
 </ol>
 <hr />
 <h2>The one-line read</h2>
 <blockquote>
-<p><em>Your store engine is fine. Everything bolted on top of it is the problem. We strip the bolt-ons, add a real catalog, host it on Cloudflare so it loads in under a second — and you keep the same WooCommerce admin you log into today.</em></p>
+<p><em>We're building you a brand-new website. New design, new code, new infrastructure on Cloudflare. The only thing that stays the same is the WooCommerce admin you log into to add and edit products.</em></p>
 </blockquote>
-<p>If you only remember one sentence, that's it.</p>
+<p>If you only remember one sentence, that's it. <strong>Lead with "new website" — don't soften it to "rebuild" or "refresh."</strong> Melissa should understand exactly what she's getting.</p>
 <hr />
 <h2>The architecture, in one paragraph</h2>
-<p>The new site lives on <strong>Cloudflare</strong> (the fastest delivery network on the internet — same one used by huge brands). The admin she logs into is <strong>still WooCommerce</strong> — same place, same buttons, same workflow. We're rebuilding the half customers see, and leaving the half she uses alone. That's why this isn't scary: she doesn't have to relearn anything. Add a product in WooCommerce the way she always has → it shows up on the new fast site automatically.</p>
+<p>The new site lives on <strong>Cloudflare</strong> (the fastest delivery network on the internet — same one used by huge brands). The admin she logs into is <strong>still WooCommerce</strong> — same place, same buttons, same workflow. We're building a brand-new customer-facing site, and leaving the back-end admin she uses alone. That's the safety net: she doesn't have to relearn anything to manage products. Add a product in WooCommerce the way she always has → it shows up on the new site automatically.</p>
 <p>If she asks "do I have to leave WordPress?" — <strong>no.</strong> That's an <em>optional</em> later upgrade called Modern Admin Migration (Medusa). Only if and when she wants a cleaner admin too. Not required, not pushed.</p>
 <hr />
 <h2>How to talk about pricing (no numbers, on purpose)</h2>
@@ -386,7 +384,10 @@
 <p><strong>"Can we start small and add later?"</strong>
 - <em>"Yes — that's exactly how this is designed. The foundation is non-negotiable, but the growth services are pick-and-add. Most clients start with the foundation plus two growth services and layer the rest in later. The system is built to expand."</em></p>
 <p><strong>"Why not just fix what's wrong?"</strong>
-- <em>"The technical issues we found aren't bugs — they're symptoms of an architecture problem. Patching them one by one costs more than the rebuild and leaves you exactly where you started: dependent on a developer for every change. We're fixing the root, not the leaves."</em></p>
+- <em>"The technical issues we found aren't bugs — they're symptoms of an architecture problem. Patching them one by one costs more than the new build and leaves you exactly where you started: dependent on a developer for every change. We're building you a new site so the next ten years don't carry the last ten years' problems."</em></p>
+<p><strong>"Wait — so this is a whole new website?"</strong>
+- <em>"Yes. New design, new code, new infrastructure on Cloudflare. The piece that stays exactly the same is the WooCommerce admin you log into to manage products — same place, same buttons, same workflow. So your day-to-day doesn't change, but what your customers see is brand new."</em>
+- <em>"I want to be clear about this because the word 'rebuild' can sometimes sound like a tune-up. This isn't that. We're not patching the current site — we're building a new one."</em></p>
 <p><strong>"I had bad experiences with developers before."</strong>
 - <em>"Understood. That's exactly why we work the way we do: fixed price, fixed scope, one deposit, one delivery date. No hourly billing. Half on signature, half at launch. If something's not right at launch, we don't move on."</em></p>
 <p><strong>"I have a developer already."</strong>
@@ -445,7 +446,7 @@
   </div>
 
   <div class="footer">
-    Prepared by Josh Sundby · May 18, 2026 · Reread before the call
+    Prepared by Josh Sundby · Reread before the call
   </div>
 </body>
 </html>
